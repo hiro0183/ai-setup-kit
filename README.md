@@ -24,6 +24,8 @@
 winget install --id Git.Git -e
 ```
 
+※ Git は Claude Code 自体には不要だが、ルートA（git clone）と STEP 7 で使うので入れる
+
 ```
 irm https://claude.ai/install.ps1 | iex
 ```
@@ -74,8 +76,10 @@ claude
 
 ## 5. 困ったとき
 - Obsidianが入らない → obsidian.md から人がダウンロードして入れる
-- Googleが答えない → claude.ai の設定 → コネクタで、3つをつなぎ直す
+- Googleが答えない → まず `/status` でログインが claude.ai のアカウントか確認（APIキーだとコネクタが読まれない）→ claude.ai の設定 → コネクタで3つをつなぐ → `/mcp` で一覧に出るか見る
 - 許可が出ない・動かない → `.claude/settings.json` の deny を見る（守りの設定が効いている）
+- ZIPを展開して日本語のファイル名が化けた → ターミナルで `tar -xf ai-setup-kit.zip` で展開し直す
+- 守りの設定（deny）はコマンドの文字列一致なので万能ではない。本命は Obsidian のゴミ箱設定・ファイル復元・「消す前に確認」の約束の3つ
 
 ## 6. キットの更新のしかた
 このフォルダ（`C:\Users\tujid\ai-setup-kit`）を直して commit・push する。客のフォルダには影響しない（導入時に `git remote remove origin` で縁が切れている）。ZIPは作り直して `dist/` に置く。
