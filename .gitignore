@@ -1,0 +1,7 @@
+.obsidian/workspace*.json
+.obsidian/plugins/*/data.json
+.claude/settings.local.json
+.DS_Store
+Thumbs.db
+dist/
+*.zip

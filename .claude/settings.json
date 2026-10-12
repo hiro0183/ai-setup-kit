@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "deny": [
+      "Bash(rm -rf*)",
+      "Bash(rm -r*)",
+      "Bash(rmdir*)",
+      "Bash(del *)",
+      "Bash(git push*)",
+      "Bash(curl*)",
+      "Bash(wget*)",
+      "PowerShell(Remove-Item*)",
+      "PowerShell(rm *)",
+      "PowerShell(rmdir*)",
+      "PowerShell(del *)",
+      "PowerShell(git push*)",
+      "PowerShell(Invoke-WebRequest*)",
+      "PowerShell(irm *)",
+      "PowerShell(curl*)",
+      "Read(./.env)",
+      "Read(./.env.*)",
+      "Read(**/credentials*)",
+      "Read(**/*.pem)",
+      "Read(**/*.key)"
+    ]
+  }
+}
